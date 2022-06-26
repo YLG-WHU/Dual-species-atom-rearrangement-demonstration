@@ -1,0 +1,15 @@
+int findBestPath(int l, int w, int* iniConfig, int* target, int* pathx, int* pathy);
+/*
+* Find the optimized moving path of the input current atom distribution.
+* l: length of the grid
+* w: width of the grid
+* iniConfig: the current initial atoms configuration， value: 0 for no atom, 1,2 for each atom species respectively
+* target: the target configuration of atoms,  value: 0 for no atom, 1,2 for each atom species respectively
+* pathx: x index of the moving path， -1 represents atom catch, -2 represents atom release, non-negative value represents the path x index;
+* pathy: y index of the moving path,  -1 represents atom catch, -2 represents atom release, non-negative value represents the path y index;
+* if find such a path, return the size of the pathx array, else return -1.
+* Eg:
+*If the result path:(1,2)-->(1,3)-->(2,3), (3, 4)-->(3,5)
+*Then, pathx array:[-1, 1, 1, 2, -2, -1, 3, 3], pathy array: [-1, 2, 3, 3, -2, -1, 4, 5, -2], return: 8
+*/
+
